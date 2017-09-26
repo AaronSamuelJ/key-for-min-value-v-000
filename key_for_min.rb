@@ -9,7 +9,7 @@ def key_for_min_value(hash)
   hash.each do |k, v|
     array << v
   end
-  num = array.min 
+  num = array.min
   hash.each do |k, v|
     if num == v
       return k
