@@ -2,10 +2,17 @@
 # hash.values.min => 3
 
 def key_for_min_value(hash)
-  num = hash.values.min
+  array = []
+  if hash == {}
+    return nil
+  end
   hash.each do |k, v|
-    if v == 3
-      k
+    array << v
+  end
+  num = array.min 
+  hash.each do |k, v|
+    if num == v
+      return k
     end
   end
 end
